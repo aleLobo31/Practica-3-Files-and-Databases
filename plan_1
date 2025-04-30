@@ -1,0 +1,4 @@
+EXPLAIN PLAN SET statement_id = 'myplan_1' FOR
+SELECT * FROM editions WHERE pub_place = 'Madrid';
+SELECT PLAN_TABLE_OUTPUT
+FROM TABLE(DBMS_XPLAN.DISPLAY(NULL, 'myplan_1', 'BASIC'));
