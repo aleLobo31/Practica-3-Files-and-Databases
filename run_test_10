@@ -1,0 +1,5 @@
+set serveroutput on
+begin
+PKG_COSTES.RUN_TEST(10); --Núm. de repeticiones
+end;
+/
