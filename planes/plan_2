@@ -1,4 +1,0 @@
-EXPLAIN PLAN SET statement_id = 'myplan_2' FOR
-SELECT * FROM editions WHERE publisher = 'B';
-SELECT *
-FROM TABLE(DBMS_XPLAN.DISPLAY(FORMAT=>'+ALLSTATS'));

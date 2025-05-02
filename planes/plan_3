@@ -1,4 +1,0 @@
-EXPLAIN PLAN SET statement_id = 'myplan_3' FOR
-SELECT * FROM copies WHERE condition = 'G';
-SELECT * 
-FROM TABLE(DBMS_XPLAN.DISPLAY(NULL, NULL, 'ALLSTATS'));
