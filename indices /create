@@ -1,3 +1,4 @@
 CREATE INDEX idx_ed_pubplace  ON editions(pub_place)   TABLESPACE TAB_2K; 
-CREATE INDEX idx_ed_publisher ON editions(publisher)   TABLESPACE TAB_2K;
+CREATE INDEX idx_ed_publisher ON editions(publisher)   TABLESPACE TAB_16K;
+ALTER INDEX idx_ed_publisher REBUILD PCTFREE 5;
 CREATE INDEX idx_cp_condition ON copies(condition)     TABLESPACE TAB_2K;
