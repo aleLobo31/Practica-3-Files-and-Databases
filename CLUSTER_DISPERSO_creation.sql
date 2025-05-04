@@ -30,19 +30,15 @@ CREATE CLUSTER cl_editions_pubplace (
   pub_place VARCHAR2(50)
 )
 SINGLE TABLE HASHKEYS 251
-TABLESPACE TAB_8K;
-
-CREATE CLUSTER cl_editions_publisher (
-  publisher VARCHAR2(100)
-)
-SINGLE TABLE HASHKEYS 251
-TABLESPACE TAB_8K;
+TABLESPACE TAB_16K
+PCTFREE 5;
 
 CREATE CLUSTER cl_copies_condition (
   condition CHAR(1)
 )
 SINGLE TABLE HASHKEYS 5
-TABLESPACE TAB_8K;
+TABLESPACE TAB_16K
+PCTFREE 5;
 
 -- CREATE ALL TABLES
 -- -----------------
@@ -95,7 +91,8 @@ CONSTRAINT pk_editions PRIMARY KEY(isbn),
 CONSTRAINT uk_editions UNIQUE (national_lib_id),
 CONSTRAINT fk_editions_books FOREIGN KEY(title,author) REFERENCES books(title,author)
 )
-CLUSTER cl_editions_publisher(publisher);
+CLUSTER cl_editions_pubplace(pub_place);
+
 
 --
 
